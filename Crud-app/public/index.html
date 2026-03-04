@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - CRUD App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <!-- Add Task Form -->
+        <div class="task-form">
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskTitle" placeholder="Task title" required>
+                <textarea id="taskDescription" placeholder="Task description" rows="3"></textarea>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Tasks List -->
+        <div class="tasks-list">
+            <h2>Tasks</h2>
+            <div id="tasksContainer"></div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Task</h2>
+            <form id="editForm">
+                <input type="hidden" id="editTaskId">
+                <input type="text" id="editTaskTitle" placeholder="Task title" required>
+                <textarea id="editTaskDescription" placeholder="Task description" rows="3"></textarea>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="editTaskCompleted">
+                    <label for="editTaskCompleted">Completed</label>
+                </div>
+                <button type="submit">Update Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
